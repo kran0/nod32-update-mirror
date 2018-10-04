@@ -20,4 +20,4 @@ VOLUME ["/data"]
 
 #ENTRYPOINT ["/src/nod32-mirror.sh"]
 ENTRYPOINT ["/entrypoint.sh"]
-CMD [ "/src/nod32-mirror.sh --force-yes --update"" ]
+CMD [ "/src/nod32-mirror.sh --force-yes --update" ]
