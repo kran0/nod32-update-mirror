@@ -1,9 +1,10 @@
 FROM alpine:3.8 as prepare
 
+ENV BRANCH=v2.2.0 # --branch can also take tags and detaches the HEAD at that commit in the resulting repository.
 ENV TEMPDIR=/tmp/code
 \
 RUN apk add --update --no-cache git unzip\
- && git clone https://github.com/tarampampam/nod32-update-mirror.git ${TEMPDIR}\
+ && git clone --branch=${BRANCH} https://github.com/tarampampam/nod32-update-mirror.git ${TEMPDIR}\
 \
 # prepare program's space
  && mkdir -vp /nod32-update-mirror\
