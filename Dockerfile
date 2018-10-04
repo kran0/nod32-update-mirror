@@ -1,6 +1,6 @@
 FROM alpine:3.8 as prepare
 
-ENV BRANCH=v2.2.0 # --branch can also take tags and detaches the HEAD at that commit in the resulting repository.
+ENV BRANCH=master #v2.2.0 # --branch can also take tags and detaches the HEAD at that commit in the resulting repository.
 ENV TEMPDIR=/tmp/code
 \
 RUN apk add --update --no-cache git unzip\
