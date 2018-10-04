@@ -1,16 +1,16 @@
 # Alternate docker image for nod32-update-mirror
 
 Another Dockerfile for [nod32-update-mirror project](https://github.com/tarampampam/nod32-update-mirror).
+Usefull examples, support, original docekr image, nginx.confs and all the stuff are in [The Original Project](https://github.com/tarampampam/nod32-update-mirror)!
 
 ## Why this realization?
-- Only nod32-update-mirror toolset without nginx;
-- Ready to use with external nginx (another container);
-- And because i can! /Please use [original](https://hub.docker.com/r/tarampampam/nod32-update-mirror/tags/) docker image instead/.
+- Pure nod32-update-mirror toolset without nginx;
+- Ready to use with external nginx (I prefer another container for nginx);
+- And because i can!
 
 ## How to use?
 
-The author supplies [the docker image](https://hub.docker.com/r/tarampampam/nod32-update-mirror/tags/) for user's need. I have no reason to repeat their work.
-This image implements my special interest. So there are only use cases:
+This image implements my special interest. So there are just a few use cases:
 
 1) Run with scheduler enabled (default):
 
@@ -36,5 +36,6 @@ This image implements my special interest. So there are only use cases:
   kran0/nod32-update-mirror:latest --force-yes --update
 ```
 
-Feel free tu use your `$PWD/data`. Usefull examples and nginx.conf file are in [The Original Project](https://github.com/tarampampam/nod32-update-mirror)
+3) Sometime i'll add docker-compose.yaml
 
+Feel free tu use your `$PWD/data`. 
