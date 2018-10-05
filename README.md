@@ -3,14 +3,14 @@
 Usefull examples, support, original docker image and all the stuff are in [The Original Project](https://github.com/tarampampam/nod32-update-mirror)!
 
 ## Why this realization?
-- Pure nod32-update-mirror toolset without nginx;
-- Ready to use with external nginx (I prefer another container for nginx);
-- And because i can!
+- Pure lightweight nod32-update-mirror toolset without nginx included;
+- Ready to use with external nginx (I prefer official nginx image);
+- And because I can!
 
 ## How to use?
 
-I use legal keys, so there is no `--keys-update` option enabled by default.
-I use my custom `settings.conf`, so you are to write your own using docs.
+Use legal keys, there is no `--keys-update` option enabled by default.
+Use my custom `settings.conf`, you are to write your own using docs.
 This image implements my special interest. So there are just a few use cases:
 
 1) Docker run with scheduler enabled (default):
