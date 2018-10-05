@@ -10,7 +10,7 @@ Usefull examples, support, original docker image and all the stuff are in [The O
 ## How to use?
 
 Use legal keys, there is no `--keys-update` option enabled by default.
-Use my custom `settings.conf`, you are to write your own using docs.
+Use custom `settings.conf`, you are to write your own using docs.
 This image implements my special interest. So there are just a few use cases:
 
 1) Docker run with scheduler enabled (default):
