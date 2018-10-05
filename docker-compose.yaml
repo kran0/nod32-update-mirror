@@ -1,16 +1,24 @@
 version: "2"
 
 services:
-  backend:
+  scheduler:
     image: kran0/nod32-update-mirror:latest
+    environment:
+      FIRST_START_DELAY: '2s'    # In SECONDS
+      SCHEDULE_PERIOD:   '43200' # In SECONDS, 43200 = 12 hours
+      START_BEFORE_LOOP: 'true'
+      NOD32MIRROR_DEBUG_MODE: '0'
     volumes:
-      - ./volumes/data:/data:z
-      - ./settings.conf:/src/settings.conf:ro
+      - nod32-data:/data:z
+      - ./volumes/settings.conf:/src/settings.conf:ro
 
-  frontend:
+  nginx:
     image: nginx:alpine
     ports:
       - 80:80
     volumes:
-      - ./volumes/data:/data:ro
+      - nod32-data:/data:ro
       - ./nginx.server.conf:/etc/nginx/conf.d/default.conf:ro
+
+volumes:
+  nod32-data:

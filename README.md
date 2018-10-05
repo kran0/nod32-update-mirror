@@ -1,7 +1,6 @@
 # Alternate docker image for nod32-update-mirror
 
-Another Dockerfile for [nod32-update-mirror project](https://github.com/tarampampam/nod32-update-mirror).
-Usefull examples, support, original docekr image, nginx.confs and all the stuff are in [The Original Project](https://github.com/tarampampam/nod32-update-mirror)!
+Usefull examples, support, original docker image and all the stuff are in [The Original Project](https://github.com/tarampampam/nod32-update-mirror)!
 
 ## Why this realization?
 - Pure nod32-update-mirror toolset without nginx;
@@ -10,9 +9,11 @@ Usefull examples, support, original docekr image, nginx.confs and all the stuff 
 
 ## How to use?
 
+I use legal keys, so there is no `--keys-update` option enabled by default.
+I use my custom `settings.conf`, so you are to write your own using docs.
 This image implements my special interest. So there are just a few use cases:
 
-1) Run with scheduler enabled (default):
+1) Docker run with scheduler enabled (default):
 
 ```bash
  docker run -it --rm --name nod32_update_scheduler\
@@ -25,7 +26,9 @@ This image implements my special interest. So there are just a few use cases:
   kran0/nod32-update-mirror:latest
 ```
 
-2) Run only worker and quit (usefull):
+Data dir `$PWD/data` will be updated every `SCHEDULE_PERIOD`.
+
+2) Docker run only worker and quit (usefull for external scheduler):
 
 ```bash
  docker run -it --rm --name nod32_update\
@@ -36,6 +39,12 @@ This image implements my special interest. So there are just a few use cases:
   kran0/nod32-update-mirror:latest --force-yes --update
 ```
 
-3) Sometime i'll add docker-compose.yaml
+Feel free to use your `$PWD/data`. 
 
-Feel free tu use your `$PWD/data`. 
+3) Docker-compose up (using docker-compose.yaml)
+
+```bash
+ docker-compose up -d
+```
+
+Nginx will serve `nod32-data` volume's contents.
