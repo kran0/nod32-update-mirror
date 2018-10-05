@@ -48,3 +48,15 @@ Feel free to use your `$PWD/data`.
 ```
 
 Nginx will serve `nod32-data` volume's contents.
+
+## How to build?
+
+Please watch my [Automated builds](https://hub.docker.com/r/kran0/nod32-update-mirror/tags/).
+
+| Repository:Tag | Build description  |
+|:-:|---|
+| kran0/nod32-update-mirror:latest | latest master from [author's git](https://github.com/tarampampam/nod32-update-mirror) |
+| kran0/davmail-docker:2.2.0 and such | Releases based on this project [tags](https://github.com/kran0/nod32-update-mirror/releases) |
+
+While the Dockerfile uses multi-stage build. You need Docker 17.05 or higher on the daemon and client to build.
+Build command: "`docker build -t kran0/nod32-update-mirror:latest .`".
