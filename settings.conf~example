@@ -1,0 +1,31 @@
+#  Based on the Nod32 Update Mirror Configuration File:
+#  https://github.com/tarampampam/nod32-update-mirror/blob/v1.x/nod32-mirror/settings.conf
+
+export NOD32MIRROR_MIRROR_DIR="/data";
+export NOD32MIRROR_URI_PATH='eset_upd/';
+
+ESET_AUTH_PAIR='EAV-CHANGEME password';
+
+export NOD32MIRROR_SERVER_0="http://um01.ru.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_1="http://um01.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_2="http://um02.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_3="http://um03.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_4="http://um04.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_5="http://um05.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_6="http://um06.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_7="http://um07.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_8="http://um08.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_9="http://um09.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_10="http://um10.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_11="http://um11.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_12="http://um13.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_13="http://um21.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_14="http://um23.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_15="http://um01.cn.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_16="http://um10.za.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+export NOD32MIRROR_SERVER_17="http://update.eset.com:80/eset_upd/ $ESET_AUTH_PAIR";
+
+export NOD32MIRROR_LANGUAGES='1033 1049';
+export NOD32MIRROR_TIMESTAMP_FILE_NAME='lastevent.txt';
+export NOD32MIRROR_VERSION_FILE_NAME='version.txt';
+export NOD32MIRROR_KEYS_DIRECTORY='/nod32-update-mirror';
