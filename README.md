@@ -3,15 +3,16 @@
 Usefull examples, support, original docker image and all the stuff are in [The Original Project](https://github.com/tarampampam/nod32-update-mirror)!
 
 ## Why this realization?
-- Pure lightweight nod32-update-mirror toolset without nginx included;
-- Ready to use with external nginx (I prefer official nginx image);
+- Pure lightweight nod32-update-mirror toolset without nginx included in main image;
+- Ready to use with (official or le-enabled) nginx;
 - And because I can!
 
 ## How to use?
 
 Use legal keys, there is no `--keys-update` option enabled by default.
-Use custom `settings.conf`, you are to write your own using docs.
-This image implements my special interest. So there are just a few use cases:
+Use custom `settings.conf`, you are to write your own using `settings.conf~example`.
+
+Use cases:
 
 1) Docker run with scheduler enabled (default):
 
@@ -27,7 +28,7 @@ This image implements my special interest. So there are just a few use cases:
 
 Data dir `$PWD/data` will be updated every `SCHEDULE_PERIOD`.
 
-2) Docker run only worker and quit (usefull for external scheduler):
+2) Docker run worker only (usefull for external scheduler):
 
 ```bash
  docker run -it --rm --name nod32_update\
@@ -40,7 +41,7 @@ Data dir `$PWD/data` will be updated every `SCHEDULE_PERIOD`.
 
 Feel free to use your `$PWD/data`. 
 
-3) Docker-compose up (using docker-compose.yaml)
+3) Docker-compose up worker and nginx (using docker-compose.yaml)
 
 ```bash
  docker-compose up -d

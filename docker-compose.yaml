@@ -10,7 +10,7 @@ services:
       NOD32MIRROR_DEBUG_MODE: '0'
     volumes:
       - nod32-data:/data:z
-      - ./volumes/settings.conf:/src/settings.conf:ro
+      - ./settings.conf:/src/settings.conf:ro
 
   nginx:
     image: nginx:alpine
