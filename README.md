@@ -9,7 +9,8 @@ Usefull examples, support, original docker image and all the stuff are in [The O
 
 ## How to use?
 
-Use legal keys, there is no `--keys-update` option enabled by default.
+This image is intended for real use. No test usage is provided by default.
+Please use with legal keys, there is no `--keys-update` option enabled by default.
 Use custom `settings.conf`, you are to write your own using `settings.conf~example`.
 
 Use cases:
@@ -28,7 +29,7 @@ Use cases:
 
 Data dir `$PWD/data` will be updated every `SCHEDULE_PERIOD`.
 
-2) Docker run worker only (usefull for external scheduler):
+2) Docker run worker only (usefull with external scheduler):
 
 ```bash
  docker run -it --rm --name nod32_update\
@@ -54,9 +55,9 @@ Nginx will serve `nod32-data` volume's contents.
 Please watch my [Automated builds](https://hub.docker.com/r/kran0/nod32-update-mirror/tags/).
 
 | Repository:Tag | Build description  |
-|:-:|---|
+|---|---|
 | kran0/nod32-update-mirror:latest | latest master from [author's git](https://github.com/tarampampam/nod32-update-mirror) |
-| kran0/nod32-update-mirror:2.2.0 and such | [Tag](https://github.com/kran0/nod32-update-mirror/releases) releases |
+| kran0/nod32-update-mirror:2.2.0  | [Tag](https://github.com/kran0/nod32-update-mirror/releases) releases |
 
-While the Dockerfile uses multi-stage build. You need Docker 17.05 or higher on the daemon and client to build.
-Build command: "`docker build -t kran0/nod32-update-mirror:latest .`".
+Build with command: "`docker build -t kran0/nod32-update-mirror:latest .`".
+You need Docker 17.05 or higher on the daemon and client to use multistage builds.
