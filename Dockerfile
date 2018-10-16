@@ -2,9 +2,11 @@ FROM alpine:3.8 as prepare
 
 # --branch can also take tags and detaches the HEAD at that commit in the resulting repository.
 ARG BRANCH=v2.2.0
-ENV TEMPDIR=/tmp/code
+# use master to build from the master;
+# Releases:
+#  Aug 28, 2018: https://github.com/tarampampam/nod32-update-mirror/releases/tag/v2.2.0
 
-RUN echo DEBUG: ${BRANCH}
+ENV TEMPDIR=/tmp/code
 
 \
 RUN apk add --update --no-cache git\
