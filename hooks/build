@@ -5,7 +5,7 @@ printenv
 set -x
 
 BUILD_ARGS=
-[ "$DOCKER_TAG" = "latest" ] || BUILD_ARGS='--build-arg BRANCH=master'
+[ "$DOCKER_TAG" = "latest" ] && BUILD_ARGS='--build-arg BRANCH=master'
 
 docker build $BUILD_ARGS -t $IMAGE_NAME .
 
