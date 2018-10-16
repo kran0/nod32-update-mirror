@@ -3,6 +3,9 @@ FROM alpine:3.8 as prepare
 # --branch can also take tags and detaches the HEAD at that commit in the resulting repository.
 ARG BRANCH=v2.2.0
 ENV TEMPDIR=/tmp/code
+
+RUN echo DEBUG: ${BRANCH}
+
 \
 RUN apk add --update --no-cache git\
  && git clone --branch=${BRANCH} https://github.com/tarampampam/nod32-update-mirror.git ${TEMPDIR}\
