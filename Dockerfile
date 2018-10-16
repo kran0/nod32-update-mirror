@@ -4,7 +4,7 @@ FROM alpine:3.8 as prepare
 ARG BRANCH=v2.2.0
 ENV TEMPDIR=/tmp/code
 \
-RUN apk add --update --no-cache git unzip\
+RUN apk add --update --no-cache git\
  && git clone --branch=${BRANCH} https://github.com/tarampampam/nod32-update-mirror.git ${TEMPDIR}\
 \
 # prepare program's space
