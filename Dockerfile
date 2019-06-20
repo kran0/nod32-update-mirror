@@ -1,4 +1,4 @@
-FROM alpine:3.8 as prepare
+FROM alpine:3.10 as prepare
 
 # --branch can also take tags and detaches the HEAD at that commit in the resulting repository.
 ARG BRANCH=v2.2.0
@@ -17,7 +17,7 @@ RUN apk add --update --no-cache git\
  && mv -v ${TEMPDIR}/src ${TEMPDIR}/scheduler/entrypoint.sh /nod32-update-mirror/\
  && find /nod32-update-mirror -type f -name "*.sh" -exec chmod -v +x {} \;
 
-FROM alpine:3.8
+FROM alpine:3.10
 
 RUN apk --no-cache --update add bash curl wget grep sed unrar findutils
 COPY --from=prepare /nod32-update-mirror /
